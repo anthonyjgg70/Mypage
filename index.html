@@ -1,3 +1,6 @@
+# index.html
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,187 +10,30 @@
 
   <title>Anthony Garcia</title>
 
-  <style>
-
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-
-    body{
-      font-family: Arial, Helvetica, sans-serif;
-      background:white;
-      color:#222;
-      line-height:1.7;
-    }
-
-    header{
-      width:100%;
-      padding:30px 10%;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      border-bottom:1px solid #eaeaea;
-    }
-
-    .logo{
-      font-size:28px;
-      font-weight:bold;
-    }
-
-    nav a{
-      margin-left:25px;
-      text-decoration:none;
-      color:#444;
-      transition:0.3s;
-    }
-
-    nav a:hover{
-      color:black;
-    }
-
-    .hero{
-      min-height:85vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:80px;
-      padding:60px 10%;
-    }
-
-    .hero-text{
-      max-width:600px;
-    }
-
-    .hero-text h1{
-      font-size:60px;
-      margin-bottom:15px;
-    }
-
-    .hero-text h2{
-      font-size:24px;
-      font-weight:normal;
-      color:#666;
-      margin-bottom:25px;
-    }
-
-    .hero-text p{
-      font-size:18px;
-      color:#444;
-      margin-bottom:30px;
-    }
-
-    .buttons{
-      display:flex;
-      gap:20px;
-    }
-
-    .btn{
-      padding:14px 28px;
-      border-radius:8px;
-      text-decoration:none;
-      border:1px solid black;
-      transition:0.3s;
-      font-size:15px;
-    }
-
-    .btn-dark{
-      background:black;
-      color:white;
-    }
-
-    .btn-dark:hover{
-      background:#333;
-    }
-
-    .btn-light{
-      color:black;
-    }
-
-    .btn-light:hover{
-      background:black;
-      color:white;
-    }
-
-    .hero-image img{
-      width:380px;
-      border-radius:20px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.12);
-    }
-
-    section{
-      padding:80px 10%;
-      max-width:1000px;
-      margin:auto;
-    }
-
-    h3{
-      font-size:32px;
-      margin-bottom:25px;
-    }
-
-    ul{
-      padding-left:20px;
-    }
-
-    li{
-      margin-bottom:10px;
-    }
-
-    footer{
-      text-align:center;
-      padding:40px;
-      border-top:1px solid #eaeaea;
-      color:#666;
-      font-size:14px;
-    }
-
-    @media(max-width:900px){
-
-      .hero{
-        flex-direction:column-reverse;
-        text-align:center;
-      }
-
-      .hero-text h1{
-        font-size:44px;
-      }
-
-      .buttons{
-        justify-content:center;
-      }
-
-      nav{
-        display:none;
-      }
-
-      .hero-image img{
-        width:280px;
-      }
-    }
-
-  </style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
   <header>
 
-    <div class="logo">
-      Anthony Garcia
-    </div>
+    <div class="header-content">
 
-    <nav>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <div class="logo">
+        Anthony Garcia
+      </div>
+
+      <nav>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
 
   </header>
 
-  <section class="hero">
+  <section class="hero container">
 
     <div class="hero-text">
 
@@ -195,11 +41,11 @@
         Anthony Garcia
       </h1>
 
-      <h2>
+      <div class="hero-subtitle">
         Differential Geometry & Dynamical Systems
-      </h2>
+      </div>
 
-      <p>
+      <p class="hero-description">
         Interested in magnetic flows, Finsler geometry,
         Anosov systems, Jacobi fields and rigidity problems.
       </p>
@@ -227,39 +73,53 @@
 
   </section>
 
-  <section id="research">
+  <section id="research" class="container">
 
-    <h3>
+    <h2>
       Research Interests
-    </h3>
+    </h2>
 
-    <ul>
-      <li>Magnetic flows</li>
-      <li>Finsler geometry</li>
-      <li>Anosov dynamics</li>
-      <li>Negative curvature</li>
-      <li>Geometric rigidity</li>
-    </ul>
+    <div class="card">
+
+      <div class="card-title">
+        Topics
+      </div>
+
+      <div class="card-text">
+        Magnetic flows, Finsler geometry,
+        negative curvature, Anosov dynamics,
+        Jacobi fields and geometric rigidity.
+      </div>
+
+    </div>
 
   </section>
 
-  <section id="publications">
+  <section id="publications" class="container">
 
-    <h3>
+    <h2>
       Publications
-    </h3>
+    </h2>
 
-    <p>
-      Coming soon.
-    </p>
+    <div class="card">
+
+      <div class="card-title">
+        Coming soon
+      </div>
+
+      <div class="card-text">
+        Articles and preprints will appear here.
+      </div>
+
+    </div>
 
   </section>
 
-  <section id="contact">
+  <section id="contact" class="container">
 
-    <h3>
+    <h2>
       Contact
-    </h3>
+    </h2>
 
     <p>
       anthony@email.com
@@ -274,3 +134,15 @@
 </body>
 
 </html>
+```
+
+# How to use
+
+Put both files in the same folder:
+
+```text
+index.html
+style.css
+```
+
+Then open `index.html` in your browser.
